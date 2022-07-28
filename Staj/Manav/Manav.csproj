@@ -46,49 +46,101 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AnaMenu.cs">
+    <Compile Include="Db_Adress\Mssql_Manav.cs" />
+    <Compile Include="FisFolder\Frm_AltBirimMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AnaMenu.Designer.cs">
-      <DependentUpon>AnaMenu.cs</DependentUpon>
+    <Compile Include="FisFolder\Frm_AltBirimMenu.Designer.cs">
+      <DependentUpon>Frm_AltBirimMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="AltFisMenu.cs">
+    <Compile Include="FisFolder\Frm_AltRenkMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AltFisMenu.Designer.cs">
-      <DependentUpon>AltFisMenu.cs</DependentUpon>
+    <Compile Include="FisFolder\Frm_AltRenkMenu.Designer.cs">
+      <DependentUpon>Frm_AltRenkMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tanimlamalar.cs">
+    <Compile Include="FisFolder\Frm_AltUrunMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tanimlamalar.Designer.cs">
-      <DependentUpon>Tanimlamalar.cs</DependentUpon>
+    <Compile Include="FisFolder\Frm_AltUrunMenu.Designer.cs">
+      <DependentUpon>Frm_AltUrunMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FIS.cs">
+    <Compile Include="Tanimlar\Frm_Birim.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FIS.Designer.cs">
-      <DependentUpon>FIS.cs</DependentUpon>
+    <Compile Include="Tanimlar\Frm_Birim.Designer.cs">
+      <DependentUpon>Frm_Birim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tanimlar\Frm_Depo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tanimlar\Frm_Depo.Designer.cs">
+      <DependentUpon>Frm_Depo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tanimlar\Frm_Firmalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tanimlar\Frm_Firmalar.Designer.cs">
+      <DependentUpon>Frm_Firmalar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tanimlar\Frm_Renk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tanimlar\Frm_Renk.Designer.cs">
+      <DependentUpon>Frm_Renk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_AnaMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_AnaMenu.Designer.cs">
+      <DependentUpon>Frm_AnaMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FisFolder\Frm_AltFisMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FisFolder\Frm_AltFisMenu.Designer.cs">
+      <DependentUpon>Frm_AltFisMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tanimlar\Frm_Tanimlamalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tanimlar\Frm_Tanimlamalar.Designer.cs">
+      <DependentUpon>Frm_Tanimlamalar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FisFolder\Frm_Fis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FisFolder\Frm_Fis.Designer.cs">
+      <DependentUpon>Frm_Fis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tanimlar\Frm_Urunler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tanimlar\Frm_Urunler.Designer.cs">
+      <DependentUpon>Frm_Urunler.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StokHareketListesi.cs">
+    <Compile Include="FisFolder\Frm_StokHareketListesi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StokHareketListesi.Designer.cs">
-      <DependentUpon>StokHareketListesi.cs</DependentUpon>
+    <Compile Include="FisFolder\Frm_StokHareketListesi.Designer.cs">
+      <DependentUpon>Frm_StokHareketListesi.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AnaMenu.resx">
-      <DependentUpon>AnaMenu.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_AnaMenu.resx">
+      <DependentUpon>Frm_AnaMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AltFisMenu.resx">
-      <DependentUpon>AltFisMenu.cs</DependentUpon>
+    <EmbeddedResource Include="FisFolder\Frm_AltFisMenu.resx">
+      <DependentUpon>Frm_AltFisMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tanimlamalar.resx">
-      <DependentUpon>Tanimlamalar.cs</DependentUpon>
+    <EmbeddedResource Include="Tanimlar\Frm_Renk.resx">
+      <DependentUpon>Frm_Renk.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FIS.resx">
-      <DependentUpon>FIS.cs</DependentUpon>
+    <EmbeddedResource Include="Tanimlar\Frm_Tanimlamalar.resx">
+      <DependentUpon>Frm_Tanimlamalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FisFolder\Frm_Fis.resx">
+      <DependentUpon>Frm_Fis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -99,8 +151,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="StokHareketListesi.resx">
-      <DependentUpon>StokHareketListesi.cs</DependentUpon>
+    <EmbeddedResource Include="FisFolder\Frm_StokHareketListesi.resx">
+      <DependentUpon>Frm_StokHareketListesi.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -115,5 +167,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

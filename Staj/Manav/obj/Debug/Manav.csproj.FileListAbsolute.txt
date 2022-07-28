@@ -18,12 +18,13 @@ C:\Users\yalci\source\repos\Staj\Manav\bin\Debug\Manav.exe
 C:\Users\yalci\source\repos\Staj\Manav\bin\Debug\Manav.pdb
 C:\Users\yalci\source\repos\Staj\Manav\obj\Debug\Manav.csproj.AssemblyReference.cache
 C:\Users\yalci\source\repos\Staj\Manav\obj\Debug\Manav.csproj.SuggestedBindingRedirects.cache
-C:\Users\yalci\source\repos\Staj\Manav\obj\Debug\Manav.AnaMenu.resources
-C:\Users\yalci\source\repos\Staj\Manav\obj\Debug\Manav.AltFisMenu.resources
-C:\Users\yalci\source\repos\Staj\Manav\obj\Debug\Manav.Tanimlamalar.resources
+C:\Users\yalci\source\repos\Staj\Manav\obj\Debug\Manav.Frm_AnaMenu.resources
+C:\Users\yalci\source\repos\Staj\Manav\obj\Debug\Manav.Frm_AltFisMenu.resources
+C:\Users\yalci\source\repos\Staj\Manav\obj\Debug\Manav.Frm_Renk.resources
+C:\Users\yalci\source\repos\Staj\Manav\obj\Debug\Manav.Frm_Tanimlamalar.resources
 C:\Users\yalci\source\repos\Staj\Manav\obj\Debug\Manav.Fis.resources
 C:\Users\yalci\source\repos\Staj\Manav\obj\Debug\Manav.Properties.Resources.resources
-C:\Users\yalci\source\repos\Staj\Manav\obj\Debug\Manav.StokHareketListesi.resources
+C:\Users\yalci\source\repos\Staj\Manav\obj\Debug\Manav.Frm_StokHareketListesi.resources
 C:\Users\yalci\source\repos\Staj\Manav\obj\Debug\Manav.csproj.GenerateResource.cache
 C:\Users\yalci\source\repos\Staj\Manav\obj\Debug\Manav.csproj.CoreCompileInputs.cache
 C:\Users\yalci\source\repos\Staj\Manav\obj\Debug\Manav.exe
