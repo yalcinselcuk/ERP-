@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -44,27 +47,67 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsFormsApp1">
+      <HintPath>..\..\..\..\OneDrive\Masaüstü\WindowsFormsApp1.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\popup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\popup.Designer.cs">
+      <DependentUpon>popup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\_combobox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSets\DS_Tanimlar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Tanimlar.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Db_Adress\Mssql_Manav.cs" />
-    <Compile Include="FisFolder\Frm_AltBirimMenu.cs">
+    <Compile Include="helper\helperclass.cs" />
+    <Compile Include="MyCommandBuilder\CommandBuildTest.cs" />
+    <Compile Include="MyCommandBuilder\MyCommandBuilders.cs" />
+    <Compile Include="StokHar\dsStokHar.cs">
+      <DependentUpon>dsStokHar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="StokHar\dsStokHar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsStokHar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="StokHar\frmStokCikis.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FisFolder\Frm_AltBirimMenu.Designer.cs">
-      <DependentUpon>Frm_AltBirimMenu.cs</DependentUpon>
+    <Compile Include="StokHar\frmStokCikis.Designer.cs">
+      <DependentUpon>frmStokCikis.cs</DependentUpon>
     </Compile>
-    <Compile Include="FisFolder\Frm_AltRenkMenu.cs">
+    <Compile Include="StokHar\frmStokCikisFisi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FisFolder\Frm_AltRenkMenu.Designer.cs">
-      <DependentUpon>Frm_AltRenkMenu.cs</DependentUpon>
+    <Compile Include="StokHar\frmStokCikisFisi.Designer.cs">
+      <DependentUpon>frmStokCikisFisi.cs</DependentUpon>
     </Compile>
-    <Compile Include="FisFolder\Frm_AltUrunMenu.cs">
+    <Compile Include="StokHar\frmStokHarDetailPopUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FisFolder\Frm_AltUrunMenu.Designer.cs">
-      <DependentUpon>Frm_AltUrunMenu.cs</DependentUpon>
+    <Compile Include="StokHar\frmStokHarDetailPopUp.Designer.cs">
+      <DependentUpon>frmStokHarDetailPopUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="StokHar\frmStokHar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokHar\frmStokHar.Designer.cs">
+      <DependentUpon>frmStokHar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StokHar\stokHareketClass.cs" />
+    <Compile Include="Tanimlar\Interface\ITanımlar.cs" />
+    <Compile Include="Tanimlar\TanimlarClasses\Birim.cs" />
+    <Compile Include="Tanimlar\TanimlarClasses\Depo.cs" />
+    <Compile Include="Tanimlar\TanimlarClasses\Firmalar.cs" />
+    <Compile Include="Tanimlar\TanimlarClasses\Renk.cs" />
     <Compile Include="Tanimlar\Frm_Birim.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,52 +138,54 @@
     <Compile Include="Frm_AnaMenu.Designer.cs">
       <DependentUpon>Frm_AnaMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FisFolder\Frm_AltFisMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FisFolder\Frm_AltFisMenu.Designer.cs">
-      <DependentUpon>Frm_AltFisMenu.cs</DependentUpon>
-    </Compile>
     <Compile Include="Tanimlar\Frm_Tanimlamalar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Tanimlar\Frm_Tanimlamalar.Designer.cs">
       <DependentUpon>Frm_Tanimlamalar.cs</DependentUpon>
     </Compile>
-    <Compile Include="FisFolder\Frm_Fis.cs">
+    <Compile Include="Tanimlar\Frm_Stok.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FisFolder\Frm_Fis.Designer.cs">
-      <DependentUpon>Frm_Fis.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Tanimlar\Frm_Urunler.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Tanimlar\Frm_Urunler.Designer.cs">
-      <DependentUpon>Frm_Urunler.cs</DependentUpon>
+    <Compile Include="Tanimlar\Frm_Stok.Designer.cs">
+      <DependentUpon>Frm_Stok.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="FisFolder\Frm_StokHareketListesi.cs">
+    <Compile Include="StokHar\Frm_StokHareketListesi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FisFolder\Frm_StokHareketListesi.Designer.cs">
+    <Compile Include="StokHar\Frm_StokHareketListesi.Designer.cs">
       <DependentUpon>Frm_StokHareketListesi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tanimlar\TanimlarClasses\Tanimlars.cs" />
+    <Compile Include="Tanimlar\TanimlarClasses\Stok.cs" />
+    <EmbeddedResource Include="Controls\popup.resx">
+      <DependentUpon>popup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_AnaMenu.resx">
       <DependentUpon>Frm_AnaMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FisFolder\Frm_AltFisMenu.resx">
-      <DependentUpon>Frm_AltFisMenu.cs</DependentUpon>
+    <EmbeddedResource Include="StokHar\frmStokCikis.resx">
+      <DependentUpon>frmStokCikis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokHar\frmStokCikisFisi.resx">
+      <DependentUpon>frmStokCikisFisi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokHar\frmStokHarDetailPopUp.resx">
+      <DependentUpon>frmStokHarDetailPopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokHar\frmStokHar.resx">
+      <DependentUpon>frmStokHar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tanimlar\Frm_Birim.resx">
+      <DependentUpon>Frm_Birim.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tanimlar\Frm_Renk.resx">
       <DependentUpon>Frm_Renk.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tanimlar\Frm_Tanimlamalar.resx">
       <DependentUpon>Frm_Tanimlamalar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FisFolder\Frm_Fis.resx">
-      <DependentUpon>Frm_Fis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -151,9 +196,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FisFolder\Frm_StokHareketListesi.resx">
+    <EmbeddedResource Include="StokHar\Frm_StokHareketListesi.resx">
       <DependentUpon>Frm_StokHareketListesi.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DataSets\DS_Tanimlar.xsc">
+      <DependentUpon>DS_Tanimlar.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\DS_Tanimlar.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Tanimlar.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\DS_Tanimlar.xss">
+      <DependentUpon>DS_Tanimlar.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -163,6 +219,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="StokHar\dsStokHar.xsc">
+      <DependentUpon>dsStokHar.xsd</DependentUpon>
+    </None>
+    <None Include="StokHar\dsStokHar.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsStokHar.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="StokHar\dsStokHar.xss">
+      <DependentUpon>dsStokHar.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

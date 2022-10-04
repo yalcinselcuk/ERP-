@@ -1,0 +1,5 @@
+C:\Users\yalci\source\repos\Staj\Components\obj\Debug\net6.0\Components.csproj.AssemblyReference.cache
+C:\Users\yalci\source\repos\Staj\Components\obj\Debug\net6.0\Components.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yalci\source\repos\Staj\Components\obj\Debug\net6.0\Components.AssemblyInfoInputs.cache
+C:\Users\yalci\source\repos\Staj\Components\obj\Debug\net6.0\Components.AssemblyInfo.cs
+C:\Users\yalci\source\repos\Staj\Components\obj\Debug\net6.0\Components.csproj.CoreCompileInputs.cache

@@ -10,51 +10,53 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data;
 using Manav.Db_Adress;
+using Manav.Tanimlar.TanimlarClasses;
+using Manav.Tanimlar;
 
 namespace Manav
 {
     public partial class Frm_Renk : Frm_Tanimlamalar
     {
-
         #region Constructor
-
         public Frm_Renk()
         {
             InitializeComponent();
-
         }
-
         #endregion
 
         #region Objects
-
-        DataTable tbl = new DataTable();
-        SqlConnection conn = Mssql_Manav.GetDBConnection();
-        SqlDataAdapter adtr;
-        SqlCommandBuilder commandBuilder;
-
+        Renk renk = null;
         #endregion
 
         #region Methods
-
         protected override void LoadData()
         {
-            tbl.Clear();
-            adtr = new SqlDataAdapter("select id, kod, aciklama from Tbl_Renk", conn);
-            base.Open_Conn();
-            adtr.Fill(tbl);
-            dataGridView1.DataSource = tbl;
-            Visible_False();
+            renk = new Renk();
+            renk.LoadData(-1);
+            dataGridView1.DataSource = renk.DS.renk;
+            this.dataGridView1.Sort(this.dataGridView1.Columns["kod"], ListSortDirection.Ascending);
             Column_Name();
-            base.Close_Conn();
+            Visible_False();
         }
         protected override void saveData()
         {
-            commandBuilder = new SqlCommandBuilder(adtr);
-            adtr.Update(tbl);
-            LoadData();
-        }
+            RowDelete();
+            renk.SaveData();
 
+        }
+        protected override void RowDelete()
+        {
+            renk.RowDelete();
+        }
+        protected override void CreateNew()
+        {
+            renk.CreateNew();
+        }
+        protected override void SetRowId()
+        {
+            renk.SetRowId();
+        }
+        protected override int RowKodIsNull { get { return renk.RowKodIsNull(); } }
         protected override void Column_Name()
         {
             dataGridView1.Columns[1].HeaderText = "KOD";
@@ -64,8 +66,6 @@ namespace Manav
         {
             dataGridView1.Columns[0].Visible = false;
         }
-
         #endregion
-
     }
 }

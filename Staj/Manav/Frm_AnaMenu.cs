@@ -30,57 +30,82 @@ namespace Manav
 
         }
 
+        Frm_Stok urunler;
         private void ürünlerToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Frm_Urunler f2 = new Frm_Urunler();
-            f2.MdiParent = this;
-            f2.Text = "Ürünler";
-            f2.Show();
+            if (urunler == null || urunler.IsDisposed)
+            {
+                urunler = new Frm_Stok();
+                urunler.MdiParent = this;
+                urunler.Text = "Ürünler";
+                urunler.Show();
+
+            }
         }
 
+        Frm_Birim birim;
         private void birimToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Frm_Birim f2 = new Frm_Birim();
-            f2.MdiParent = this;
-            f2.Text = "Birim";
-            f2.Show();
+            if (birim == null || birim.IsDisposed)
+            {
+                birim = new Frm_Birim();
+                birim.MdiParent = this;
+                birim.Text = "Birim";
+                birim.Show();
+            }
         }
 
+        Frm_Depo depo;
         private void depoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Frm_Depo f2 = new Frm_Depo();
-            f2.MdiParent = this;
-            f2.Text = "Depolar";
-            f2.Show();
+            if (depo == null || depo.IsDisposed)
+            {
+                depo = new Frm_Depo();
+                depo.MdiParent = this;
+                depo.Text = "Depolar";
+                depo.Show();
+            }
         }
 
+        Frm_Firmalar firmalar;
         private void firmalarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Frm_Firmalar f2 = new Frm_Firmalar();
-            f2.MdiParent = this;
-            f2.Text = "Firmalar";
-            f2.Show();
+            if (firmalar == null || firmalar.IsDisposed)
+            {
+                firmalar = new Frm_Firmalar();
+
+                firmalar.MdiParent = this;
+                this.Text = "Firmalar";
+                firmalar.Show();
+            }
         }
 
-
+        Frm_Renk renk;
         private void renkToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Frm_Renk f2 = new Frm_Renk();
-            f2.MdiParent = this;
-            f2.Text = "Renkler";
-            f2.Show();
+            if (renk == null || renk.IsDisposed)
+            {
+                renk = new Frm_Renk();
+
+                renk.MdiParent = this;
+                this.Text = "Renkler";
+                renk.Show();
+            }
         }
 
-
+        Frm_StokHareketListesi stokHareketListesi;
         private void stokHareketleriStripMenuItem_Click(object sender, EventArgs e)
         {
-            Frm_StokHareketListesi stokHareketListesi = new Frm_StokHareketListesi();
-            stokHareketListesi.MdiParent = this;
-            stokHareketListesi.Show();
-            this.Text = "Stok Hareketleri";
+            if (stokHareketListesi == null || stokHareketListesi.IsDisposed)
+            {
+                stokHareketListesi = new Frm_StokHareketListesi();
+
+                stokHareketListesi.MdiParent = this;
+                
+                this.Text = "Stok Hareketleri";
+                stokHareketListesi.Show();
+            }
         }
         #endregion
-
-        
     }
 }

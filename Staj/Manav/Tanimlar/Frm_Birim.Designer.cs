@@ -28,10 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // Frm_Birim
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Location = new System.Drawing.Point(0, 0);
+            this.Name = "Frm_Birim";
             this.Text = "Frm_Birim";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

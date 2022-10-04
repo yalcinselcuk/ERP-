@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Manav.Db_Adress;
+using Manav.Tanimlar;
 
 namespace Manav
 {
@@ -20,38 +21,41 @@ namespace Manav
         {
             InitializeComponent();
         }
-
         #endregion
 
         #region Objects
-
-        DataTable tbl = new DataTable();
-        SqlConnection conn = Mssql_Manav.GetDBConnection();
-        SqlDataAdapter adtr;
-        SqlCommandBuilder commandBuilder;
-
+        Depo depo = null;
         #endregion
 
         #region Methods
-
         protected override void LoadData()
         {
-            tbl.Clear();
-            adtr = new SqlDataAdapter("select id, kod, aciklama from Tbl_Depo", conn);
-            base.Open_Conn();
-            adtr.Fill(tbl);
-            dataGridView1.DataSource = tbl;
-            Visible_False();
+            depo = new Depo();
+            depo.LoadData(-1);
+            dataGridView1.DataSource = depo.DS.depo;
+            this.dataGridView1.Sort(this.dataGridView1.Columns["kod"], ListSortDirection.Ascending);
             Column_Name();
-            base.Close_Conn();
+            Visible_False();
         }
         protected override void saveData()
         {
-            commandBuilder = new SqlCommandBuilder(adtr);
-            adtr.Update(tbl);
-            LoadData();
-        }
+            RowDelete();
+            depo.SaveData();
 
+        }
+        protected override void RowDelete()
+        {
+            depo.RowDelete();
+        }
+        protected override void CreateNew()
+        {
+            depo.CreateNew();
+        }
+        protected override void SetRowId()
+        {
+            depo.SetRowId();
+        }
+        protected override int RowKodIsNull { get { return depo.RowKodIsNull(); } }
         protected override void Column_Name()
         {
             dataGridView1.Columns[1].HeaderText = "KOD";
@@ -61,7 +65,6 @@ namespace Manav
         {
             dataGridView1.Columns[0].Visible = false;
         }
-
         #endregion
     }
 }

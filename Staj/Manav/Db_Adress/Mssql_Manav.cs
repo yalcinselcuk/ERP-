@@ -9,11 +9,10 @@ namespace Manav.Db_Adress
 {
     public static class Mssql_Manav
     {
-
         public static SqlConnection GetDBConnection()
         {
             SqlConnection conn = new SqlConnection(
-            "Data Source=LAPTOP-8HOREQD2\\SQLEXPRESS;Initial Catalog=Manav;Integrated Security=True");
+            "Data Source=LAPTOP-8HOREQD2;Initial Catalog=textileproject;Integrated Security=True");
             return conn;
         }
     }

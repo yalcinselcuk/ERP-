@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Manav.Db_Adress;
+using Manav.Tanimlar;
+
 
 namespace Manav
 {
@@ -16,43 +18,45 @@ namespace Manav
     {
 
         #region Constructor
-
         public Frm_Birim()
         {
             InitializeComponent();
         }
-
         #endregion
 
         #region Objects
-
-        DataTable tbl = new DataTable();
-        SqlConnection conn = Mssql_Manav.GetDBConnection();
-        SqlDataAdapter adtr;
-        SqlCommandBuilder commandBuilder;
-
+        Birim birim = null;
         #endregion
 
         #region Methods
-
         protected override void LoadData()
         {
-            tbl.Clear();
-            adtr = new SqlDataAdapter("select id, kod, aciklama from Tbl_Birim", conn);
-            base.Open_Conn();
-            adtr.Fill(tbl);
-            dataGridView1.DataSource = tbl;
-            Visible_False();
+            birim = new Birim();
+            birim.LoadData(-1);
+            dataGridView1.DataSource = birim.DS.birim;
+            this.dataGridView1.Sort(this.dataGridView1.Columns["kod"], ListSortDirection.Ascending);
             Column_Name();
-            base.Close_Conn();
+            Visible_False();
         }
         protected override void saveData()
         {
-            commandBuilder = new SqlCommandBuilder(adtr);
-            adtr.Update(tbl);
-            LoadData();
-        }
+            RowDelete();
+            birim.SaveData();
 
+        }
+        protected override void RowDelete()
+        {
+            birim.RowDelete();
+        }
+        protected override void CreateNew()
+        {
+            birim.CreateNew();
+        }
+        protected override void SetRowId()
+        {
+            birim.SetRowId();
+        }
+        protected override int RowKodIsNull { get { return birim.RowKodIsNull(); } }
         protected override void Column_Name()
         {
             dataGridView1.Columns[1].HeaderText = "KOD";
@@ -62,7 +66,6 @@ namespace Manav
         {
             dataGridView1.Columns[0].Visible = false;
         }
-
         #endregion
     }
 }
